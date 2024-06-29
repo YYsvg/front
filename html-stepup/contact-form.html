@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせフォーム</title>
+</head>
+<body>
+  <main>
+    <h1>お問い合わせフォーム</h1>
+    <form action="#" method="post">
+      <dl>
+        <dt>お名前</dt>
+        <!-- この場合　value属性はフィールドの初期入力値を定義 -->
+        <dd><input type="text" name="username"></dd>
+        <dt>メールアドレス</dt>
+        <dd><input type="text" name="email"></dd>
+        <dt>お住まいの地域</dt>
+        <dd>
+          <select name="area">
+            <!-- 選択して下さい　の欄についてvalue=""空で表現 -->
+            <!-- オプションでselectedを記述すると　選択しが初期状態で選択される -->
+            <!-- optionのうち、１つだけが　selected属性を持てる -->
+            <option value="" selected>選択して下さい</option>
+            <option value="hokkaido">北海道</option>
+            <option value="tohoku">東北</option>
+            <option value="kanto">関東</option>
+            <option value="tyubu">中部</option>
+            <option value="kinki">近畿</option>
+            <option value="okinawa">沖縄</option>
+          </select>
+        </dd>
+        <dt>性別</dt>
+        <dd>
+          <!-- checked属性を記述すると　初期値となる -->
+          <input type="radio" name="gender" value="male" checked>男性
+          <input type="radio" name="gender" value="female">女性
+        </dd>
+        <dt>お問い合わせ内容</dt>
+        <!-- 中身（コンテンツ）は空でOK -->
+        <!-- inputとは仕様が違うため注意 -->
+        <dd><textarea name="contents"></textarea></dd>
+        <dt>プライバシーポリシーに同意する</dt>
+        <!-- valueの後にcheche属性をつけると　初期値となる -->
+        <dd><input type="checkbox" name="privacy" value="1"></dd>
+        <input type="submit" value="送信">
+      </dl>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cellの結合</title>
+</head>
+<body>
+
+  <!--
+
+  属性を使って、　セルの結合（数も任意で指定できる）　を定義
+  結合したい数を指定する
+  横に結合 : colspan コルスパン、カラムスパン　colum（列）
+  縦に結合 : rowspan ロースパン
+
+  -->
+
+  <table border="1">
+    <caption>横に結合（列を結合）</caption>
+    <tr>
+      <th colspan="3">セルを結合</th>
+    </tr>
+    <tr>
+      <td>コンテンツ１</td>
+      <td>コンテンツ２</td>
+      <td>コンテンツ３</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <!-- table>caption+tr>td*2 -->
+
+  <table border="1">
+    <caption>縦に結合（行を結合）</caption>
+    <tr>
+      <td rowspan="3">セルを結合</td>
+      <td>コンテンツ１</td>
+    </tr>
+
+  <!-- (tr>td)*2 -->
+  <tr>
+    <td>コンテンツ２</td>
+  </tr>
+  <tr>
+    <td>コンテンツ３</td>
+  </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <h1>果物の価格表</h1>
+    <table border="1">
+      <thead>
+        <tr>
+        <!-- ヘッダーは揃える -->
+        <!-- 縦に結合 -->
+          <th rowspan="2">名前</th>
+          <th rowspan="2">画像</th>
+          <th rowspan="2">科目</th>
+        <!-- 横に結合 -->
+          <th colspan="2">価格</th>
+        </tr>
+
+        <!--  結合される行を追加　-->
+          <tr>
+            <th>小</th>
+            <th>大</th>
+          </tr>
+
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="#">りんご</a></td>
+          <td><img src="https://learnwithnakamura.s3.ap-northeast-1.amazonaws.com/html-stepup-v2023/apple.jpg"></td>
+          <td>バラ科リンゴ属</td>
+          <td>100円</td>
+          <td>200円</td>
+        </tr>
+        <tr>
+          <td><a href="#">オレンジ</a></td>
+          <td><img src="https://learnwithnakamura.s3.ap-northeast-1.amazonaws.com/html-stepup-v2023/orange.jpg"></td>
+          <td>ミカン科ミカン属</td>
+          <td>100円</td>
+          <td>200円</td>
+        </tr>
+        <tr>
+          <td><a href="#">ブドウ</a></td>
+          <td><img src="https://learnwithnakamura.s3.ap-northeast-1.amazonaws.com/html-stepup-v2023/grape.jpg"></td>
+          <td>ブドウ科ブドウ属</td>
+          <td>100円</td>
+          <td>200円</td>
+        </tr>
+      </tbody>
+
+    </table>
+  </main>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+</head>
+
+<!--
+
+    データを入力するためのフォーム部品を作る要素
+    type属性を指定することで様々な入力フォームを作成可能
+    type=text: テキストボックス（value: フィールドの初期入力値）parms[:name]
+    type=password: 入力ちを隠す１行フィールド
+    type=checkbox,radio(value:選択されたとき、サーバーへ送信される値となる boolean:true)
+    name="パラメータ名？"　サーバーから見たときにどのデータか判別できるように記述
+    type=submit (value="ログイン"　この場合ラベルの名前)
+
+    valueはinputのtype属性によって役割を変える
+
+-->
+
+<body>
+  <h1>ログイン</h1>
+  <!-- ダミーで#とする
+    本来はサーバーサイドでログイン処理を行うときのパスを書く /users/sign_in　-->
+  <form action="#" method="post">
+    <input type="text" name="username" placeholder="ユーザーネーム">
+    <input type="password" name="password" placeholder="パスワード">
+    <input type="submit" value="ログイン">
+  </form>
+</body>
+</html>
