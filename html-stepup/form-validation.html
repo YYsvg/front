@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+
+  HTMLでバリデーションの設定方法
+  ①required属性を記述すると、　値が空の場合にエラー表示となる
+  ②maxlength属性文字数制限をつける　５文字まで入力を許可するが、６文字以上は入力できない
+
+  ただし、クライアント側(HTML)のフォームバリデーションは検証モードを使えば一時的に書き換え可能
+  ・ユーザーが簡単に書き換えられる
+  ・データの信頼性、セキュリティには効果が薄い
+
+  サーバー側でのバリデーション必須
+  -->
+
+  <form action="#">
+    <input type="text" required maxlength="5">
+    <input type="submit" value="送信">
+  </form>
+
+
+
+</body>
+</html>

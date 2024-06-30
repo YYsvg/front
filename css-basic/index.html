@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>はじめてのCSS</title>
+  <style>
+    body {
+      /* 背景を指定　全面に表示 */
+      background-image: url(images/dot.png);
+      /* 繰り返し　しない */
+      background-repeat: no-repeat;
+      /* 中央揃え,右揃え */
+      background-position: center;
+      background-position: right;
+    }
+
+    h1 {
+      color: #aa0000;
+    }
+    p {
+      color: #aa0000;
+    }
+    /* 下が優先される　上書きされる */
+    p {
+      color: #0000aa;
+    }
+    h4 {
+      color: #aa0000;
+    }
+    h5 {
+      color: #fff;
+      background-color: #6af;
+    }
+  </style>
+  <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+  <h1>内部参照</h1>
+  <!-- 複数から参照可能 -->
+  <h2>外部参照</h2>
+  <!-- あまり使わない　HTML文書の可読性が下がる -->
+  <h3 style="color: #00aa00;">インライン</h3>
+  <p>上から下へと評価します</p>
+  <!-- 内部参照よりもインラインが優先される -->
+  <h4 style="color: #00aa00;">優先順位</h4>
+  <h5>色と背景の指定の演習</h5>
+</body>
+</html>

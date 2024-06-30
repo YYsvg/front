@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="#" method="post">
+    <dl>
+      <dt><label for="name">お名前</label></dt>
+      <dd><input id="name" type="text" name="name" required></dd>
+      <dt><label for="email">email</label></dt>
+      <dd><input id="email" type="text" name="email" required></dd>
+      <dt>性別</dt>
+      <dd>
+        <label><input type="radio" name="gender" value="male" checked>男性</label>
+        <label><input type="radio" name="gender" valuse="female">女性</label>
+      </dd>
+      <dt><label for="job">現在のご職業</label></dt>
+      <dd><select name="job" id="job">
+        <option value="" selected>選択して下さい</option>
+        <option value="gakusei">学生</option>
+        <option value="musyoku">無職</option>
+        <option value="sonota">その他</option>
+      </select></dd>
+      <dt><label for="pr">自己PR</label></dt>
+      <dd><textarea name="pr" id="pr"></textarea></dd>
+      <dt><label for="privacy">プライバシーポリシーに同意する</label></dt>
+      <dd><input type="checkbox" id="privacy" name="privacy"></dd>
+      <input type="submit" value="送信">
+    </dl>
+  </form>
+</body>
+</html>
