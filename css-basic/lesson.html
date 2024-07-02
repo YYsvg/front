@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    /* p階層下の　spanのみに効果 */
+    p span {
+      color: red;
+    }
+    /* div階層１つ下の pのみに効果 */
+    div > p {
+      text-decoration: underline;
+    }
+    p + div {
+      color: aquamarine;
+    }
+    p ~ span {
+      font-style: italic;
+    }
+    h2 , p {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1><span>結合子</span>セレクターの練習</h1>
+  <p><span>こんにちは</span>、中村さん</p>
+  <div>
+    <p>読書</p>
+    <span>
+      <p>テレビ</p>
+    </span>
+    <p>mannga</p>
+    <span>雑誌</span>
+  </div>
+  <span>これが〜です</span>
+  <div><p>後で</p></div>
+
+  <h2>セレクタ</h2>
+  <p>複数のセレクタ</p>
+</body>
+</html>
