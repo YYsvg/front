@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-rows: 200px 200px;
+      gap: 16px;
+    }
+    .fill {
+      grid-template-columns: repeat(auto-fill, minmax(130px,1fr));
+    }
+    .fit {
+      /* 余白はできず相対的に広がる どこまでも１frが広がる*/
+      grid-template-columns: repeat(auto-fit, minmax(130px,1fr));
+      margin-top: 50px;
+    }
+    /* 縦並び */
+    .item {
+      background-color: #ffa61c;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container fill">
+    <div class="item">item01</div>
+    <div class="item">item02</div>
+    <div class="item">item03</div>
+    <div class="item">item04</div>
+    <div class="item">item05</div>
+    <div class="item">item06</div>
+  </div>
+  <div class="container fit">
+    <div class="item">item01</div>
+    <div class="item">item02</div>
+    <div class="item">item03</div>
+    <div class="item">item04</div>
+    <div class="item">item05</div>
+    <div class="item">item06</div>
+  </div>
+</body>
+</html>
