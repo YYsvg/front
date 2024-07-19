@@ -251,3 +251,89 @@ function price(unitPrice, n) {
     console.log(result.innerText);
 }, false);
 
+
+// name属性で取得
+//<input name="result" type="text">
+  //フォームに入力したテキストを取得できる
+//<input id="button" type="button" value="Get!">
+
+const e = document.getElementById("button");
+e.addEventListener('click', () => {
+  const elements = document.getElementsByName('result');
+  console.log(elements[0].value);
+}, false);
+
+
+
+// class属性で取得
+<ul>
+<li class="foo">elements1</li>
+<li class="bar">elements2</li>
+<li>elements3</li>
+<li class="foo">elements4</li>
+<li class="bar">elements5</li>
+</ul>
+
+
+const e = document.getElementById("button");
+e.addEventListener('click', () => {
+  const elements = document.getElementsByClassName('foo');
+  for(let i = 0; i < elements.length; i++) {
+    console.log(elements[i].innerText);
+  }
+}, false);
+
+// ノードを作成・追加する
+
+// <ul id="list"> 
+// </ul>
+// <input id="button" type="button" value="Add!">
+
+const e = document.getElementById("button");
+e.addEventListener('click', () => {
+  const li = document.createElement('li');
+  const text = document.createTextNode('test');
+  // 生成したli要素に追加する子ノード（テキストノード）を追加
+  li.appendChild(text);
+
+  // li要素を表示させるため、要素オブジェクト（ノード）をドキュメントに追加
+  const listEmelement = document.getElementById('list');
+  listEmelement.appendChild(li);
+}, false);
+
+
+// 置き換える
+
+const newList = document.createElement('li');
+newList.setAttribute('id', 'newList');
+const newText = document.createTextNode('new element');
+newList.appendChild(newText);
+const oldList = document.getElementById('oldList');
+const parentNode = oldList.parentNode;
+parentNode.replaceChild(newList, oldList);
+
+
+// 削除する
+
+//<ul id="list">
+//<li>element1</li>
+//<li>element2</li>
+//<li>element3</li>
+//<li>element4</li>
+//</ul>
+//<input id="button" type="button" value="Remove!">
+
+const e = document.getElementById('button');
+e.addEventListener('click', () => {
+  const parentElement = document.getElementById('list');
+  const elements = parentElement.getElementsByTagName('li');
+  const removeIndex = elements.length - 1;
+  // console.log(elements.length)
+  parentElement.removeChild(elements[removeIndex]);
+});
+
+// イベント
+// ページの読み込み時に表示
+window.onload = () => {
+  console.log('load event!');
+}
